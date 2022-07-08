@@ -2,6 +2,7 @@ import Spline from "@splinetool/react-spline";
 import { useState } from "react";
 import { IoMenu, IoLogoGithub } from "react-icons/io5";
 import me from "./images/me.jpg";
+import resume from "./images/resume.pdf";
 
 import {
   VerticalTimeline,
@@ -46,9 +47,10 @@ function App() {
                 Contact
               </a>
               <a
-                href=""
+                href={resume}
                 className="ml-auto text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border 
               border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in-out"
+                download
               >
                 Download
               </a>
@@ -98,7 +100,8 @@ function App() {
                 </a>
                 <motion.a
                   whileTap={{ scale: 0.5 }}
-                  href=""
+                  href={resume}
+                  download
                   className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border 
                   border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in-out"
                   onClick={() => setIsActive(false)}
@@ -111,18 +114,13 @@ function App() {
         </nav>
         {/* 3d Section */}
         <section className="relative" id="home">
-          <Spline scene="https://prod.spline.design/qGJhF87IK0dywvbJ/scene.splinecode" />
+          <Spline scene="https://prod.spline.design/oz6b0EceiuIRST13/scene.splinecode" />
+          {/* <Spline scene="https://prod.spline.design/JnX1vlxqeSfms3Vv/scene.splinecode" /> */}
           <div className="absolute bottom-10 w-full justify-center items-center flex">
             <div className="shadow-md p-4 flex justify-center items-center bg-zinc-900 rounded-3xl">
               <p className="text-textBase">Press and drag to orbit</p>
             </div>
           </div>
-          {/* <Spline scene="https://prod.spline.design/OaZEYqkw8I5ulTKB/scene.splinecode" /> */}
-          {/* <Spline scene="https://prod.spline.design/uyjivm-9dTrT7iPF/scene.splinecode" /> */}
-          {/* <Spline
-          className=""
-          scene="https://prod.spline.design/OaZEYqkw8I5ulTKB/scene.splinecode"
-        /> */}
         </section>
         {/* main section */}
         <main className="w-[80%] mt-5">
@@ -133,7 +131,7 @@ function App() {
           >
             {/* image box */}
             <div className="w-full h-420 flex items-center justify-center">
-              <div className="w-275 h-340 bg-emerald-200 rounded-md relative">
+              <div className="w-275 h-340 bg-gray-900 rounded-md relative">
                 <img
                   className="w-full h-full absolute -right-4 top-4 object-cover rounded-lg shadow-lg"
                   src={me}
@@ -144,25 +142,18 @@ function App() {
             {/* conten box */}
             <div className="w-full h-420 flex flex-col items-center justify-center">
               <p className="text-lg text-textBase text-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Possimus enim mollitia voluptatem vel. Autem illo omnis hic
-                cumque, earum ipsam! Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Possimus enim mollitia voluptatem vel. Autem
-                illo omnis hic cumque, earum ipsam! Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Possimus enim mollitia voluptatem
-                vel. Autem illo omnis hic cumque, earum ipsam! Lorem ipsum dolor
-                sit amet consectetur adipisicing elit. Possimus enim mollitia
-                voluptatem vel. Autem illo omnis hic cumque, earum ipsam!
+                Hi, I am Mahbub Morshed, a full stack developer and 3D artist.
+                I’ve been working on frontend with react app development for
+                over 1 year now and backend with django for over 2 year now.Had
+                my own projects, coded mostly in Javascript and python. I
+                learned a lot, both at Bootcamp and mostly following
+                documentation while working on the applications. I'm a 3D artist
+                over 6 years now. Blender, Autodesk Maya and Unity are the
+                software that I used for my 3D model and environment design. Now
+                trying to explore three.js, and I want make a 3D web app. Now I
+                am looking to get a job at an innovative IT Farm, and glad to
+                have the opportunity. Other than coding.
               </p>
-              <motion.button
-                whileTap={{ scale: 0.8 }}
-                className="w-full md:w-auto relative mt-6 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4
-               focus:ring-green-200 dark:focus:ring-green-800 hover:shadow-lg hover:shadow-teal-500/50 hover:dark:shadow-lg hover:dark:shadow-teal-800/80"
-              >
-                <span className="w-full md:w-auto relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                  Download
-                </span>
-              </motion.button>
             </div>
           </section>
           {/* timeline section */}
